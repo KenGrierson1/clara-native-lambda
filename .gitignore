@@ -1,0 +1,12 @@
+/.calva/
+/.idea/
+/.lein-*
+/.nrepl-port
+/.vscode/
+/*.iml
+/pom.xml
+/pom.xml.asc
+/target/
+/clara-native-lambda
+/reports/
+/resources/META-INF/native-image/clara-native-lambda/
