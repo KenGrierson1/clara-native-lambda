@@ -32,7 +32,8 @@ More 'reachability data' is generated when the tests are run and these will appe
 
 ## Running Locally
 
-`curl -XPOST "http://localhost:8080/2015-03-31/functions/function/invocations" -d '{"some": "content"}'`
+- `.\run-local.sh`
+- `curl -XPOST "http://localhost:8080/2015-03-31/functions/function/invocations" -d '{"some": "content"}'`
 
 ## Configuring AWS
 - `aws ecr create-repository --repository-name clara-native-lambda`
