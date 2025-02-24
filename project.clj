@@ -1,7 +1,7 @@
 (defproject clara-native-lambda "0.1.0-SNAPSHOT"
 
   :description "Example project of Clara Rules + GraalVM Native Image + AWS Lambda Containers"
-  :url "https://github.com/kennyboy/clara-native-lambda"
+  :url "https://github.com/KenGrierson1/clara-native-lambda"
   :license {:name "Apache License 2.0"
             :url "https://www.apache.org/licenses/LICENSE-2.0"}
 

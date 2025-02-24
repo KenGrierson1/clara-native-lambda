@@ -35,18 +35,18 @@ More 'reachability data' is generated when the tests are run and this will appea
 - curl -XPOST "http://localhost:8080/2015-03-31/functions/function/invocations" -d '{}'
 
 ## Configuring AWS
-- aws ecr create-repository --repository-name clara-native-lambda
-- aws ecr get-login-password --region <your region> | docker login --username AWS --password-stdin <your account>.dkr.ecr.<ypur region>.amazonaws.com
-- aws lambda create-function --function-name clara-native-lambda  --package-type Image --code ImageUri=<your account>.dkr.ecr.<your region>.amazonaws.com/clara-native-lambda:latest  --role arn:aws:iam::<your account>:role/lambda-role
+- `aws ecr create-repository --repository-name clara-native-lambda`
+- `aws ecr get-login-password --region <your region> | docker login --username AWS --password-stdin <your account>.dkr.ecr.<ypur region>.amazonaws.com`
+- `aws lambda create-function --function-name clara-native-lambda  --package-type Image --code ImageUri=<your account>.dkr.ecr.<your region>.amazonaws.com/clara-native-lambda:latest  --role arn:aws:iam::<your account>:role/lambda-role`
 
 ## Deploying to AWS
 
 There is a single Dockerfiles for packaging the application:
 
 - [Dockerfile-clara-native-lambda](Dockerfile-clara-native-lambda) Uses an AWS-provided base image suitable for deploying to AWS ECR
-- docker build -t clara-native-lambda -f Dockerfile-clara-native-lambda .
-- docker tag clara-native-lambda:latest <your account>.dkr.ecr.<your region>.amazonaws.com/clara-native-lambda:latest
-- docker push <your account>.dkr.ecr.<your region>.amazonaws.com/clara-native-lambda:latest
+- `docker build -t clara-native-lambda -f Dockerfile-clara-native-lambda .`
+- `docker tag clara-native-lambda:latest <your account>.dkr.ecr.<your region>.amazonaws.com/clara-native-lambda:latest`
+- `docker push <your account>.dkr.ecr.<your region>.amazonaws.com/clara-native-lambda:latest`
 
 ## Acknowledgements
 
